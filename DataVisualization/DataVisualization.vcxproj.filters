@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{65380ac7-c766-467b-a67d-87eb2f4781e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{77decbd2-9d0e-4364-91ab-7e038543a77d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\DataStorage">
+      <UniqueIdentifier>{4d7e7a22-ee2c-42ec-afc0-73cfe30b6589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\BaseClasses">
+      <UniqueIdentifier>{5d675f44-822b-45ce-a314-2a763950da52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Systems">
+      <UniqueIdentifier>{60e69711-26e7-4c8c-949f-588bd84ce021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\AdditionalStd">
+      <UniqueIdentifier>{f5cb87a3-8fea-4bbf-a0c8-f4626395edbe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\BaseClasses\App.cpp">
+      <Filter>Core\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\BaseClasses\AppObject.cpp">
+      <Filter>Core\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\DataStorage\DataFrame.cpp">
+      <Filter>Core\DataStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Systems\Input.cpp">
+      <Filter>App\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Systems\Screen.cpp">
+      <Filter>App\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Systems\UserPrefs.cpp">
+      <Filter>App\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\AdditionalStd\String.cpp">
+      <Filter>Core\AdditionalStd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\BaseClasses\Scene.cpp">
+      <Filter>Core\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Systems\SystemsLoader.cpp">
+      <Filter>App\Systems</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Core\BaseClasses\App.h">
+      <Filter>Core\BaseClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\BaseClasses\AppObject.h">
+      <Filter>Core\BaseClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\DataStorage\DataFrame.h">
+      <Filter>Core\DataStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\Systems\Input.h">
+      <Filter>App\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\Systems\Screen.h">
+      <Filter>App\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\Systems\UserPrefs.h">
+      <Filter>App\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\AdditionalStd\String.h">
+      <Filter>Core\AdditionalStd</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\BaseClasses\Scene.h">
+      <Filter>Core\BaseClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\DataStorage\vec2.h">
+      <Filter>Core\DataStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\DataStorage\vec3.h">
+      <Filter>Core\DataStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\Systems\SystemsLoader.h">
+      <Filter>App\Systems</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
