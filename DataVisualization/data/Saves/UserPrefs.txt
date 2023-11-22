@@ -2,4 +2,5 @@ int windowHeight 600
 int windowWidth 1000
 float mouseSensitivityY 0.003
 float mouseSensitivityX 0.003
-string appName Data`Visualization
+float moveSpeed 0.1
+string appName Data Visualization 

@@ -20,6 +20,10 @@ std::string Replace(std::string line, char from, char to) {
     return line;
 }
 
+std::string ToString(char symbole) {
+    return std::string(1, symbole);
+}
+
 int ToInt(std::string line) {
     return atoll(line.c_str());
 }

@@ -4,7 +4,6 @@
 
 
 const std::string UserPrefs::_fileName = "data/Saves/UserPrefs.txt";
-const char UserPrefs::_spaceReplacer = '`';
 
 void UserPrefs::OnInstaniate() {
 	ReadFromFile(_fileName);
@@ -22,7 +21,10 @@ void UserPrefs::ReadFromFile(std::string fileName) {
 		std::string valueType = info[0], valueName = info[1], value = info[2];
 		if (valueType == "int") { _valuesInt[valueName] = ToInt(value); }
 		if (valueType == "float") { _valuesFloat[valueName] = ToFloat(value); }
-		if (valueType == "string") { _valuesString[valueName] = Replace(value, _spaceReplacer, ' '); }
+		if (valueType == "string") { 
+			_valuesString[valueName] = "";
+			for (int i = 2; i < info.size(); ++i) { _valuesString[valueName] += info[i] + " "; }
+		}
 	}
 }
 
@@ -31,7 +33,7 @@ void UserPrefs::SaveToFile(std::string fileName) {
 	file.open(fileName);
 	for (auto& i : _valuesInt) { file << "int " << i.first << " " << i.second << "\n"; }
 	for (auto& i : _valuesFloat) { file << "float " << i.first << " " << i.second << "\n"; }
-	for (auto& i : _valuesString) { file << "string " << i.first << " " << Replace(i.second, ' ', _spaceReplacer) << "\n"; }
+	for (auto& i : _valuesString) { file << "string " << i.first << " " << i.second << "\n"; }
 	file.close();
 }
 

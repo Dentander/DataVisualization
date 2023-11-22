@@ -19,17 +19,23 @@
     <Filter Include="Core">
       <UniqueIdentifier>{77decbd2-9d0e-4364-91ab-7e038543a77d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\DataStorage">
-      <UniqueIdentifier>{4d7e7a22-ee2c-42ec-afc0-73cfe30b6589}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Core\BaseClasses">
       <UniqueIdentifier>{5d675f44-822b-45ce-a314-2a763950da52}</UniqueIdentifier>
     </Filter>
-    <Filter Include="App\Systems">
-      <UniqueIdentifier>{60e69711-26e7-4c8c-949f-588bd84ce021}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Core\AdditionalStd">
       <UniqueIdentifier>{f5cb87a3-8fea-4bbf-a0c8-f4626395edbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Systems">
+      <UniqueIdentifier>{60e69711-26e7-4c8c-949f-588bd84ce021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Scenes">
+      <UniqueIdentifier>{23638d94-914b-43fc-95f1-4502cc491528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\UI">
+      <UniqueIdentifier>{75e782d1-184e-4fd3-afd8-8e64d2b76ba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\Visualization">
+      <UniqueIdentifier>{434d3ea3-f82a-469a-97cc-4ac3b91f712e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -45,26 +51,35 @@
     <ClCompile Include="src\Core\BaseClasses\AppObject.cpp">
       <Filter>Core\BaseClasses</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\DataStorage\DataFrame.cpp">
-      <Filter>Core\DataStorage</Filter>
-    </ClCompile>
-    <ClCompile Include="src\App\Systems\Input.cpp">
-      <Filter>App\Systems</Filter>
-    </ClCompile>
-    <ClCompile Include="src\App\Systems\Screen.cpp">
-      <Filter>App\Systems</Filter>
-    </ClCompile>
-    <ClCompile Include="src\App\Systems\UserPrefs.cpp">
-      <Filter>App\Systems</Filter>
-    </ClCompile>
     <ClCompile Include="src\Core\AdditionalStd\String.cpp">
       <Filter>Core\AdditionalStd</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\BaseClasses\Scene.cpp">
       <Filter>Core\BaseClasses</Filter>
     </ClCompile>
-    <ClCompile Include="src\App\Systems\SystemsLoader.cpp">
-      <Filter>App\Systems</Filter>
+    <ClCompile Include="src\Core\Systems\UserPrefs.cpp">
+      <Filter>Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Systems\SystemsLoader.cpp">
+      <Filter>Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Systems\Screen.cpp">
+      <Filter>Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Systems\Input.cpp">
+      <Filter>Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\AdditionalStd\DataFrame.cpp">
+      <Filter>Core\AdditionalStd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Visualization\Camera.cpp">
+      <Filter>App\Visualization</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Visualization\CameraInput.cpp">
+      <Filter>App\Visualization</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Scenes\DataViewer.cpp">
+      <Filter>App\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -74,32 +89,41 @@
     <ClInclude Include="include\Core\BaseClasses\AppObject.h">
       <Filter>Core\BaseClasses</Filter>
     </ClInclude>
-    <ClInclude Include="include\Core\DataStorage\DataFrame.h">
-      <Filter>Core\DataStorage</Filter>
-    </ClInclude>
-    <ClInclude Include="include\App\Systems\Input.h">
-      <Filter>App\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="include\App\Systems\Screen.h">
-      <Filter>App\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="include\App\Systems\UserPrefs.h">
-      <Filter>App\Systems</Filter>
-    </ClInclude>
     <ClInclude Include="include\Core\AdditionalStd\String.h">
       <Filter>Core\AdditionalStd</Filter>
     </ClInclude>
     <ClInclude Include="include\Core\BaseClasses\Scene.h">
       <Filter>Core\BaseClasses</Filter>
     </ClInclude>
-    <ClInclude Include="include\Core\DataStorage\vec2.h">
-      <Filter>Core\DataStorage</Filter>
+    <ClInclude Include="include\Core\Systems\UserPrefs.h">
+      <Filter>Core\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="include\Core\DataStorage\vec3.h">
-      <Filter>Core\DataStorage</Filter>
+    <ClInclude Include="include\Core\Systems\Input.h">
+      <Filter>Core\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="include\App\Systems\SystemsLoader.h">
-      <Filter>App\Systems</Filter>
+    <ClInclude Include="include\Core\Systems\Screen.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\Systems\SystemsLoader.h">
+      <Filter>Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\AdditionalStd\vec3.h">
+      <Filter>Core\AdditionalStd</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\AdditionalStd\DataFrame.h">
+      <Filter>Core\AdditionalStd</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\AdditionalStd\vec2.h">
+      <Filter>Core\AdditionalStd</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\Visualization\Camera.h">
+      <Filter>App\Visualization</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\Visualization\CameraInput.h">
+      <Filter>App\Visualization</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\Scenes\DataViewer.h">
+      <Filter>App\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

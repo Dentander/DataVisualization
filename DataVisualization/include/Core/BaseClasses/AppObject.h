@@ -60,7 +60,3 @@ public:
 		return result;
 	}
 };
-
-
-
-

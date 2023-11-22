@@ -25,6 +25,7 @@ public:
     vec3 operator * (float value)       const { return vec3(x * value  , y * value  , z * value)  ; }
     vec3 operator / (float value)       const { return vec3(x * value  , y * value  , z / value)  ; }
     vec3 operator - ()                  const { return vec3(-x         , -y         , -z)         ; }
+    vec3 operator += (vec3 const& other) { return vec3(x += other.x, y += other.y, z += other.z); }
 
     float SquaredLength() const { return x * x + y * y + z * z   ; }
     float Length()        const { return sqrt(SquaredLength())   ; }

@@ -1,8 +1,7 @@
 #pragma once
-#include <iostream>
 #include <SFML/Graphics.hpp>
 #include <Systems/UserPrefs.h>
-#include <DataStorage/vec2.h>
+#include <AdditionalStd/vec2.h>
 
 
 class Screen : public AppObject {

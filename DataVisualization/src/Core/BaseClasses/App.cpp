@@ -8,6 +8,7 @@
 void App::Start() {
 	SystemsLoader* _systemsLoader = new SystemsLoader();
 	_systemsLoader->Instaniate();
+	Update();
 }
 
 void App::Run() {
@@ -15,7 +16,6 @@ void App::Run() {
 		Update();
 		Draw();
 	}
-	Exit();
 }
 
 void App::Update() { 
@@ -26,8 +26,3 @@ void App::Draw() {
 	AppObject::DrawScene(); 
 }
 
-void App::Exit() {
-	AppObject::DestroyScene();
-	AppObject::DestroyAll();
-	exit(0);
-}

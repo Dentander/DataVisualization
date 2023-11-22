@@ -31,26 +31,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -148,29 +148,35 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\App\Systems\Input.cpp" />
-    <ClCompile Include="src\App\Systems\Screen.cpp" />
-    <ClCompile Include="src\App\Systems\SystemsLoader.cpp" />
-    <ClCompile Include="src\App\Systems\UserPrefs.cpp" />
+    <ClCompile Include="src\App\Scenes\DataViewer.cpp" />
+    <ClCompile Include="src\App\Visualization\Camera.cpp" />
+    <ClCompile Include="src\App\Visualization\CameraInput.cpp" />
+    <ClCompile Include="src\Core\AdditionalStd\DataFrame.cpp" />
     <ClCompile Include="src\Core\AdditionalStd\String.cpp" />
     <ClCompile Include="src\Core\BaseClasses\App.cpp" />
     <ClCompile Include="src\Core\BaseClasses\AppObject.cpp" />
     <ClCompile Include="src\Core\BaseClasses\Scene.cpp" />
-    <ClCompile Include="src\Core\DataStorage\DataFrame.cpp" />
+    <ClCompile Include="src\Core\Systems\Input.cpp" />
+    <ClCompile Include="src\Core\Systems\Screen.cpp" />
+    <ClCompile Include="src\Core\Systems\SystemsLoader.cpp" />
+    <ClCompile Include="src\Core\Systems\UserPrefs.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\App\Systems\Input.h" />
-    <ClInclude Include="include\App\Systems\Screen.h" />
-    <ClInclude Include="include\App\Systems\SystemsLoader.h" />
-    <ClInclude Include="include\App\Systems\UserPrefs.h" />
+    <ClInclude Include="include\App\Scenes\DataViewer.h" />
+    <ClInclude Include="include\App\Visualization\Camera.h" />
+    <ClInclude Include="include\App\Visualization\CameraInput.h" />
+    <ClInclude Include="include\Core\AdditionalStd\DataFrame.h" />
     <ClInclude Include="include\Core\AdditionalStd\String.h" />
+    <ClInclude Include="include\Core\AdditionalStd\vec2.h" />
+    <ClInclude Include="include\Core\AdditionalStd\vec3.h" />
     <ClInclude Include="include\Core\BaseClasses\App.h" />
     <ClInclude Include="include\Core\BaseClasses\AppObject.h" />
     <ClInclude Include="include\Core\BaseClasses\Scene.h" />
-    <ClInclude Include="include\Core\DataStorage\DataFrame.h" />
-    <ClInclude Include="include\Core\DataStorage\vec2.h" />
-    <ClInclude Include="include\Core\DataStorage\vec3.h" />
+    <ClInclude Include="include\Core\Systems\Input.h" />
+    <ClInclude Include="include\Core\Systems\Screen.h" />
+    <ClInclude Include="include\Core\Systems\SystemsLoader.h" />
+    <ClInclude Include="include\Core\Systems\UserPrefs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

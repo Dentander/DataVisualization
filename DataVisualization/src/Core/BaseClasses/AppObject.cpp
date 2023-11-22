@@ -32,12 +32,12 @@ void AppObject::UpdateScene() {
 		return a->GetUpdatePriority() > b->GetUpdatePriority();
 	});
 
-	for (int i = 0; i < _objects.size(); ++i) {
+	for (size_t i = 0; i < _objects.size(); ++i) {
 		auto* object = _objects[i];
 		if (object->_justInstantiated == true) { object->OnInstaniate(); }
 	}
 
-	for (int i = 0; i < _objects.size(); ++i) {
+	for (size_t i = 0; i < _objects.size(); ++i) {
 		auto* object = _objects[i];
 		if (object->enabled == false) { continue; }
 		if (object->_justInstantiated == true) { object->OnStart(); }
@@ -45,7 +45,7 @@ void AppObject::UpdateScene() {
 
 	for (auto* object : _objects) { object->_justInstantiated = false; }
 
-	for (int i = 0; i < _objects.size(); ++i) {
+	for (size_t i = 0; i < _objects.size(); ++i) {
 		auto* object = _objects[i];
 		if (object->enabled == true) { object->OnUpdate(); }
 		else { object->OnDisabledUpdate(); }
@@ -66,7 +66,7 @@ void AppObject::DrawScene() {
 
 void AppObject::DestroyScene() {
 	std::vector<AppObject*> notDestroyedObjects;
-	for (auto& object : _objects) {
+	for (auto* object : _objects) {
 		if (object->_destroyOnLoad == false) { notDestroyedObjects.push_back(object); }
 		else { delete object; }
 	}
