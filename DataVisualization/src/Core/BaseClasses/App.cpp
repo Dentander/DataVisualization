@@ -7,14 +7,14 @@
 
 void App::Start() {
 	SystemsLoader* _systemsLoader = new SystemsLoader();
-	_systemsLoader->Instaniate();
+	_systemsLoader->Load();
 	Update();
 }
 
 void App::Run() {
 	while (true) {
-		Update();
 		Draw();
+		Update();
 	}
 }
 

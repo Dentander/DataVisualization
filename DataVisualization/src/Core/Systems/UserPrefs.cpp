@@ -1,11 +1,13 @@
 #include <fstream>
 #include <Systems/UserPrefs.h>
 #include <AdditionalStd/String.h>
+#include <SFML/System/Err.hpp>
 
 
 const std::string UserPrefs::_fileName = "data/Saves/UserPrefs.txt";
 
 void UserPrefs::OnInstaniate() {
+	sf::err().rdbuf(0);
 	ReadFromFile(_fileName);
 }
 

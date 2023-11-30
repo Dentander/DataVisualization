@@ -3,4 +3,5 @@ int windowWidth 1000
 float mouseSensitivityY 0.003
 float mouseSensitivityX 0.003
 float moveSpeed 0.1
+float fontSize 1.5
 string appName Data Visualization 

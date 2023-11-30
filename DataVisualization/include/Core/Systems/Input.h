@@ -8,6 +8,7 @@
 class Input : public AppObject {
 private:
     UserPrefs* _userPrefs;
+    sf::Clock _clock;
     sf::RenderWindow* _render;
     std::unordered_map<std::string, sf::Keyboard::Key> _stringToSfmlKey;
     std::unordered_set<sf::Keyboard::Key> _keysJustPressed;

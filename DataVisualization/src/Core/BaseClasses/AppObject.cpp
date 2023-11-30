@@ -2,7 +2,7 @@
 #include <BaseClasses/AppObject.h>
 
 
-AppObject* AppObject::Instaniate(std::string tag, int updatePriority, int drawPriority, bool destroyOnLoad) {
+AppObject* AppObject::Instaniate(Tag tag, int updatePriority, int drawPriority, bool destroyOnLoad) {
 	_tag = tag;
 	_updatePriority = updatePriority;
 	_drawPriority = drawPriority;
@@ -11,7 +11,7 @@ AppObject* AppObject::Instaniate(std::string tag, int updatePriority, int drawPr
 	return this;
 }
 
-std::string AppObject::GetTag() { 
+Tag AppObject::GetTag() {
 	return _tag; 
 }
 
@@ -29,7 +29,7 @@ std::vector<AppObject*> AppObject::_objects;
 void AppObject::UpdateScene() {
 	// ========== SORT BY PRIORITY ==========
 	std::sort(_objects.begin(), _objects.end(), [](AppObject* a, AppObject* b) {
-		return a->GetUpdatePriority() > b->GetUpdatePriority();
+		return a->GetUpdatePriority() < b->GetUpdatePriority();
 	});
 
 	for (size_t i = 0; i < _objects.size(); ++i) {
@@ -55,7 +55,7 @@ void AppObject::UpdateScene() {
 void AppObject::DrawScene() {
 	// ========== SORT BY PRIORITY ==========
 	std::sort(_objects.begin(), _objects.end(), [](AppObject* a, AppObject* b) {
-		return a->GetDrawPriority() > b->GetDrawPriority();
+		return a->GetDrawPriority() < b->GetDrawPriority();
 	});
 
 	for (auto* object : _objects) {

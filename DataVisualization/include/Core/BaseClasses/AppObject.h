@@ -4,9 +4,18 @@
 #include <iostream>
 
 
+enum class Tag {
+	None,
+	System,
+	UI,
+	Camera,
+	Visualization,
+};
+
+
 class AppObject {
 private:
-	std::string _tag;
+	Tag _tag;
 	int _updatePriority;
 	int _drawPriority;
 	bool _destroyOnLoad = true;
@@ -26,13 +35,13 @@ public:
 	bool enabled = true;
 
 	AppObject* Instaniate(
-		std::string tag = "None",
+		Tag tag = Tag::None,
 		int updatePriority = 0,
 		int drawPriority = 0,
 		bool destroyOnLoad = true
 	);
 
-	std::string GetTag();
+	Tag GetTag();
 	int GetUpdatePriority();
 	int GetDrawPriority();
 

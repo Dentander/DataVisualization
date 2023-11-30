@@ -47,6 +47,12 @@ void CameraInput::UpdateKeys() {
 	if (_input->AreKeysPressed(_right))    { _moveDirection += vec2f( 0,  1); }
 	if (_input->AreKeysPressed(_left))     { _moveDirection += vec2f( 0, -1); }
 	_moveDirection = _moveDirection * _moveSpeed;
+
+	if (_input->IsKeyPressed("Shift")) { _moveDirection *= 4; }
+}
+
+bool CameraInput::IsViewerMode() {
+	return _viewerMode;
 }
 
 vec2f CameraInput::GetMoveDirection() {
@@ -56,3 +62,4 @@ vec2f CameraInput::GetMoveDirection() {
 vec2f CameraInput::GetAngleDirection() {
 	return _angleDirection;
 }
+

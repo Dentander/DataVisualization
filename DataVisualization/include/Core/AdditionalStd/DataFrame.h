@@ -1,15 +1,24 @@
 #pragma once
-#include <map>
-#include <string>
 #include <vector>
-#include <AdditionalStd/String.h>
+#include <unordered_map>
+#include <AdditionalStd/DataFrameCell.h>
 
 
 class DataFrame {
-public:
-	std::map<std::string, int> columns;
-	std::vector<std::vector<int>> data;
+private:
+	std::unordered_map<std::string, std::vector<DataFrameCell>> _data;
+	std::unordered_map<std::string, float> _dataMin;
+	std::unordered_map<std::string, float> _dataMax;
 
-	void ReadCsv(std::string name);
+public:
+	bool ReadCsv(const std::string& fileName);
+	void Cache();
+
+	size_t GetSize();
+	float GetMin(std::string column);
+	float GetMax(std::string column);
+	std::vector<char*> GetColumns();
+
+	std::vector<DataFrameCell>& operator[](const std::string& column);
 };
 

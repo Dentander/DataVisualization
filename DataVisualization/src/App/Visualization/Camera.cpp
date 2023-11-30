@@ -16,14 +16,12 @@ void Camera::UpdateRotation() {
 	if (_rotation.y < -3.14 / 2) { _rotation.y = -3.14 / 2; }
 }
 
-
 void Camera::UpdatePosition() {
 	vec3f direction = vec3f(
 		_cameraInput->GetMoveDirection().x,
 		0, 
 		_cameraInput->GetMoveDirection().y
 	);
-
 	_position += direction.Rotate(_rotation.x, _rotation.y);
 }
 

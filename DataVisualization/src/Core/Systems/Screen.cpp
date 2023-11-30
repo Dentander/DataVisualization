@@ -1,3 +1,6 @@
+#include <imgui.h>
+#include <GL/glew.h>
+#include <GL/freeglut_std.h>
 #include <Systems/Screen.h>
 
 
@@ -11,7 +14,7 @@ void Screen::OnInstaniate() {
     settings.majorVersion      = 0;
     settings.minorVersion      = 0;
 
-    _render = new sf::RenderWindow(); 
+    _render = new sf::RenderWindow();
     _render->create(
         sf::VideoMode(
             _userPrefs->GetInt("windowWidth", 1000), 
@@ -20,12 +23,17 @@ void Screen::OnInstaniate() {
         _userPrefs->GetString("appName", "Data Visualization"),
         7u, 
         settings
-    );
+    );    
 }
 
 void Screen::OnDraw() {
+    ImGui::SFML::Render(*_render);
     _render->display();
-    _render->clear();
+
+    EnableGL();
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glClearColor(0, 0, 0, 1);
+    DisableGL();
 }
 
 void Screen::EnableGL() {

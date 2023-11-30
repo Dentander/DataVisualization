@@ -31,3 +31,11 @@ int ToInt(std::string line) {
 float ToFloat(std::string line) {
     return atof(line.c_str());
 }
+
+bool IsFloat(std::string line) {
+    if (line.empty()) { return false; }
+
+    char* ptr;
+    strtof(line.c_str(), &ptr);
+    return (*ptr) == '\0';
+}

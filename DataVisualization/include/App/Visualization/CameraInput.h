@@ -35,6 +35,7 @@ private:
     void UpdateKeys();
 
 public:
+    bool IsViewerMode();
     vec2f GetMoveDirection();
     vec2f GetAngleDirection();
 };

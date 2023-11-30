@@ -120,7 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include/App;include/Core;Imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include/App;include/Core;lib/Imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,7 +135,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include/App;include/Core;Imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include/App;include/Core;lib/Imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,13 +145,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="data\Shaders\BackgroundFragment.glsl" />
+    <None Include="data\Shaders\SpheresFragment.glsl" />
+    <None Include="data\Shaders\SpheresVertex.glsl" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="lib\imgui\imgui-SFML.cpp" />
+    <ClCompile Include="lib\imgui\imgui.cpp" />
+    <ClCompile Include="lib\Imgui\ImGuiFileDialog.cpp" />
+    <ClCompile Include="lib\imgui\imgui_draw.cpp" />
+    <ClCompile Include="lib\imgui\imgui_tables.cpp" />
+    <ClCompile Include="lib\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\App\Scenes\DataViewer.cpp" />
+    <ClCompile Include="src\App\UI\DataAxis.cpp" />
+    <ClCompile Include="src\App\UI\DataLoader.cpp" />
+    <ClCompile Include="src\App\Visualization\Background.cpp" />
     <ClCompile Include="src\App\Visualization\Camera.cpp" />
     <ClCompile Include="src\App\Visualization\CameraInput.cpp" />
+    <ClCompile Include="src\App\Visualization\Data.cpp" />
+    <ClCompile Include="src\App\Visualization\Spheres.cpp" />
     <ClCompile Include="src\Core\AdditionalStd\DataFrame.cpp" />
+    <ClCompile Include="src\Core\AdditionalStd\DataFrameCell.cpp" />
     <ClCompile Include="src\Core\AdditionalStd\String.cpp" />
     <ClCompile Include="src\Core\BaseClasses\App.cpp" />
     <ClCompile Include="src\Core\BaseClasses\AppObject.cpp" />
@@ -164,9 +179,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\App\Scenes\DataViewer.h" />
+    <ClInclude Include="include\App\UI\DataAxis.h" />
+    <ClInclude Include="include\App\UI\DataLoader.h" />
+    <ClInclude Include="include\App\Visualization\Background.h" />
     <ClInclude Include="include\App\Visualization\Camera.h" />
     <ClInclude Include="include\App\Visualization\CameraInput.h" />
+    <ClInclude Include="include\App\Visualization\Data.h" />
+    <ClInclude Include="include\App\Visualization\Spheres.h" />
     <ClInclude Include="include\Core\AdditionalStd\DataFrame.h" />
+    <ClInclude Include="include\Core\AdditionalStd\DataFrameCell.h" />
     <ClInclude Include="include\Core\AdditionalStd\String.h" />
     <ClInclude Include="include\Core\AdditionalStd\vec2.h" />
     <ClInclude Include="include\Core\AdditionalStd\vec3.h" />
@@ -177,6 +198,17 @@
     <ClInclude Include="include\Core\Systems\Screen.h" />
     <ClInclude Include="include\Core\Systems\SystemsLoader.h" />
     <ClInclude Include="include\Core\Systems\UserPrefs.h" />
+    <ClInclude Include="lib\imgui\imconfig-SFML.h" />
+    <ClInclude Include="lib\imgui\imconfig.h" />
+    <ClInclude Include="lib\imgui\imgui-SFML.h" />
+    <ClInclude Include="lib\imgui\imgui-SFML_export.h" />
+    <ClInclude Include="lib\imgui\imgui.h" />
+    <ClInclude Include="lib\Imgui\ImGuiFileDialog.h" />
+    <ClInclude Include="lib\Imgui\ImGuiFileDialogConfig.h" />
+    <ClInclude Include="lib\imgui\imgui_internal.h" />
+    <ClInclude Include="lib\imgui\imstb_rectpack.h" />
+    <ClInclude Include="lib\imgui\imstb_textedit.h" />
+    <ClInclude Include="lib\imgui\imstb_truetype.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

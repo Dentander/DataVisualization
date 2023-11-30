@@ -3,6 +3,7 @@
 #include <Systems/Input.h>
 #include <Systems/Screen.h>
 #include <Systems/UserPrefs.h>
+#include <Visualization/Spheres.h>
 
 
 void SystemsLoader::OnInstaniate() {
@@ -10,7 +11,7 @@ void SystemsLoader::OnInstaniate() {
 	Screen* screen = new Screen();
 	Input* input = new Input();
 
-	userPrefs->Instaniate("UserPrefs", -1, -1, false);
-	screen->Instaniate("Screen", -1, std::numeric_limits<int>::max(), false);
-	input->Instaniate("Input", -1, -1, false);
+	userPrefs->Instaniate(Tag::System, -1, -1, false);
+	screen->Instaniate(Tag::System, -1, std::numeric_limits<int>::max(), false);
+	input->Instaniate(Tag::System, -1, -1, false);
 }

@@ -37,9 +37,21 @@
     <Filter Include="App\Visualization">
       <UniqueIdentifier>{434d3ea3-f82a-469a-97cc-4ac3b91f712e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Imgui">
+      <UniqueIdentifier>{eb73759d-a0c4-406e-8d75-7fdfd28f87bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="data\Shaders\SpheresFragment.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data\Shaders\SpheresVertex.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data\Shaders\BackgroundFragment.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -80,6 +92,42 @@
     </ClCompile>
     <ClCompile Include="src\App\Scenes\DataViewer.cpp">
       <Filter>App\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\AdditionalStd\DataFrameCell.cpp">
+      <Filter>Core\AdditionalStd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Visualization\Spheres.cpp">
+      <Filter>App\Visualization</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Visualization\Background.cpp">
+      <Filter>App\Visualization</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Visualization\Data.cpp">
+      <Filter>App\Visualization</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\imgui-SFML.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\imgui.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\imgui_draw.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\imgui_tables.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\imgui_widgets.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Imgui\ImGuiFileDialog.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\UI\DataLoader.cpp">
+      <Filter>App\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\UI\DataAxis.cpp">
+      <Filter>App\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +172,57 @@
     </ClInclude>
     <ClInclude Include="include\App\Scenes\DataViewer.h">
       <Filter>App\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\AdditionalStd\DataFrameCell.h">
+      <Filter>Core\AdditionalStd</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\Visualization\Spheres.h">
+      <Filter>App\Visualization</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\Visualization\Background.h">
+      <Filter>App\Visualization</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\Visualization\Data.h">
+      <Filter>App\Visualization</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imstb_textedit.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imconfig.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imconfig-SFML.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imgui.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imgui_internal.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imgui-SFML.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imgui-SFML_export.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imstb_rectpack.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imstb_truetype.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Imgui\ImGuiFileDialog.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Imgui\ImGuiFileDialogConfig.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\UI\DataLoader.h">
+      <Filter>App\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\UI\DataAxis.h">
+      <Filter>App\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,10 +1,9 @@
+#include <imgui.h>
 #include <Systems/Input.h>
 #include <AdditionalStd/String.h>
 
 
 void Input::OnInstaniate() {
-	sf::err().rdbuf(0);
-
 	_userPrefs = AppObject::GetObjectOfType<UserPrefs>();
 	_render = AppObject::GetObjectOfType<Screen>()->GetRender();
 
@@ -23,6 +22,8 @@ void Input::OnInstaniate() {
 	for (char symbole = 'A'-1; symbole <= 'Z'; ++symbole) {
 		_stringToSfmlKey[ToString(symbole)] = sf::Keyboard::Key(sf::Keyboard::Key::A + (symbole - 'A'));
 	}
+
+	ImGui::SFML::Init(*_render);
 }
 
 void Input::OnUpdate() {
@@ -30,9 +31,12 @@ void Input::OnUpdate() {
 
 	sf::Event sfmlEvent;
 	while (_render->pollEvent(sfmlEvent)) {
+		ImGui::SFML::ProcessEvent(sfmlEvent);
 		if (sfmlEvent.type == sf::Event::Closed) { Exit(); }
 		if (sfmlEvent.type == sf::Event::KeyPressed) { _keysJustPressed.insert(sfmlEvent.key.code); }
 	}
+	ImGui::SFML::Update(*_render, _clock.restart());
+	ImGui::GetFont()->Scale = _userPrefs->GetFloat("fontSize", 1.5f);
 
 	if (IsKeyJustPressed("Escape")) { Exit(); }
 }
@@ -40,6 +44,7 @@ void Input::OnUpdate() {
 void Input::Exit() {
 	AppObject::DestroyScene();
 	AppObject::DestroyAll();
+	ImGui::SFML::Shutdown();
 	exit(0);
 }
 
