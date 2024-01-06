@@ -32,3 +32,11 @@ vec3f Camera::GetPosition() {
 vec2f Camera::GetRotation() {
 	return _rotation;
 }
+
+vec3f Camera::GetViewDirection() {
+	return vec3f(
+		cos(_rotation.y) * cos(_rotation.x),
+		sin(_rotation.y),
+		cos(_rotation.y) * sin(_rotation.x)
+	);
+}

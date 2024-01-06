@@ -4,11 +4,14 @@ uniform vec4 viewport;
 uniform vec2 u_resolution;
 uniform vec3 u_camera_position;
 uniform vec2 u_camera_rotation;
+uniform vec3 u_columns_min;
+uniform vec3 u_columns_max;
 
 attribute float R;
 
 varying float sphereRadius;
 varying vec3 spherePos;
+
 
 void main() {
     gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
@@ -18,7 +21,8 @@ void main() {
         1.0, 0.0, 0.0, 0.0,
         0.0, 1.0, 0.0, 0.0,
         0.0, 0.0, 1.0, 0.0,
-        gl_Vertex.x / R, gl_Vertex.y / R, gl_Vertex.z / R, 1.0 / R);
+        gl_Vertex.x / R, gl_Vertex.y / R, gl_Vertex.z / R, 1.0 / R
+    );
 
     mat4 PMTt = transpose(gl_ModelViewProjectionMatrix * T);
 
@@ -30,8 +34,6 @@ void main() {
     float r4Dr4T = dot(r4.xyz, r4.xyz) - r4.w * r4.w;
     float r2Dr2T = dot(r2.xyz, r2.xyz) - r2.w * r2.w;
     float r2Dr4T = dot(r2.xyz, r4.xyz) - r2.w * r4.w;
-
-    gl_Position = vec4(-r1Dr4T, -r2Dr4T, gl_Position.z / gl_Position.w * (-r4Dr4T), -r4Dr4T);
 
     float discriminant_x = r1Dr4T * r1Dr4T - r4Dr4T * r1Dr1T;
     float discriminant_y = r2Dr4T * r2Dr4T - r4Dr4T * r2Dr2T;

@@ -84,9 +84,6 @@
     <ClCompile Include="src\Core\AdditionalStd\DataFrame.cpp">
       <Filter>Core\AdditionalStd</Filter>
     </ClCompile>
-    <ClCompile Include="src\App\Visualization\Camera.cpp">
-      <Filter>App\Visualization</Filter>
-    </ClCompile>
     <ClCompile Include="src\App\Visualization\CameraInput.cpp">
       <Filter>App\Visualization</Filter>
     </ClCompile>
@@ -127,6 +124,18 @@
       <Filter>App\UI</Filter>
     </ClCompile>
     <ClCompile Include="src\App\UI\DataAxis.cpp">
+      <Filter>App\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\UI\AxisScaler.cpp">
+      <Filter>App\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Visualization\Camera.cpp">
+      <Filter>App\Visualization</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\Visualization\Point3D.cpp">
+      <Filter>App\Visualization</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\UI\MinMaxAvgTable.cpp">
       <Filter>App\UI</Filter>
     </ClCompile>
   </ItemGroup>
@@ -222,6 +231,15 @@
       <Filter>App\UI</Filter>
     </ClInclude>
     <ClInclude Include="include\App\UI\DataAxis.h">
+      <Filter>App\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\UI\AxisScaler.h">
+      <Filter>App\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\Visualization\Point3D.h">
+      <Filter>App\Visualization</Filter>
+    </ClInclude>
+    <ClInclude Include="include\App\UI\MinMaxAvgTable.h">
       <Filter>App\UI</Filter>
     </ClInclude>
   </ItemGroup>

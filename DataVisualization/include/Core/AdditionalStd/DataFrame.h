@@ -9,6 +9,7 @@ private:
 	std::unordered_map<std::string, std::vector<DataFrameCell>> _data;
 	std::unordered_map<std::string, float> _dataMin;
 	std::unordered_map<std::string, float> _dataMax;
+	size_t _size = 0;
 
 public:
 	bool ReadCsv(const std::string& fileName);

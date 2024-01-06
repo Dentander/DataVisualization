@@ -158,12 +158,15 @@
     <ClCompile Include="lib\imgui\imgui_tables.cpp" />
     <ClCompile Include="lib\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\App\Scenes\DataViewer.cpp" />
+    <ClCompile Include="src\App\UI\AxisScaler.cpp" />
     <ClCompile Include="src\App\UI\DataAxis.cpp" />
     <ClCompile Include="src\App\UI\DataLoader.cpp" />
+    <ClCompile Include="src\App\UI\MinMaxAvgTable.cpp" />
     <ClCompile Include="src\App\Visualization\Background.cpp" />
     <ClCompile Include="src\App\Visualization\Camera.cpp" />
     <ClCompile Include="src\App\Visualization\CameraInput.cpp" />
     <ClCompile Include="src\App\Visualization\Data.cpp" />
+    <ClCompile Include="src\App\Visualization\Point3D.cpp" />
     <ClCompile Include="src\App\Visualization\Spheres.cpp" />
     <ClCompile Include="src\Core\AdditionalStd\DataFrame.cpp" />
     <ClCompile Include="src\Core\AdditionalStd\DataFrameCell.cpp" />
@@ -179,12 +182,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\App\Scenes\DataViewer.h" />
+    <ClInclude Include="include\App\UI\AxisScaler.h" />
     <ClInclude Include="include\App\UI\DataAxis.h" />
     <ClInclude Include="include\App\UI\DataLoader.h" />
+    <ClInclude Include="include\App\UI\MinMaxAvgTable.h" />
     <ClInclude Include="include\App\Visualization\Background.h" />
     <ClInclude Include="include\App\Visualization\Camera.h" />
     <ClInclude Include="include\App\Visualization\CameraInput.h" />
     <ClInclude Include="include\App\Visualization\Data.h" />
+    <ClInclude Include="include\App\Visualization\Point3D.h" />
     <ClInclude Include="include\App\Visualization\Spheres.h" />
     <ClInclude Include="include\Core\AdditionalStd\DataFrame.h" />
     <ClInclude Include="include\Core\AdditionalStd\DataFrameCell.h" />

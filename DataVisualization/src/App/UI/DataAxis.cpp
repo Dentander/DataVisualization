@@ -21,8 +21,7 @@ void DataAxis::OnDisabledUpdate() {
 }
 
 void DataAxis::OnDraw() {
-	if (_cameraInput->IsViewerMode()) { return; }
-	if (_data->GetSize() == 0) { return; }
+	if (_cameraInput->IsViewerMode() or _data->GetSize() == 0) { return; }
 
 	ImGui::Begin("Select Axis");
 
@@ -30,11 +29,11 @@ void DataAxis::OnDraw() {
 	ImGui::Combo("Axis Y", &currentAxisY, _data->GetColumns().data(), _data->GetColumns().size());
 	ImGui::Combo("Axis Z", &currentAxisZ, _data->GetColumns().data(), _data->GetColumns().size());
 
-	_data->columnX = _data->GetColumns()[currentAxisX];
-	_data->columnY = _data->GetColumns()[currentAxisY];
-	_data->columnZ = _data->GetColumns()[currentAxisZ];
+	if (ImGui::Button("Save")) {
+		_data->columnX = _data->GetColumns()[currentAxisX];
+		_data->columnY = _data->GetColumns()[currentAxisY];
+		_data->columnZ = _data->GetColumns()[currentAxisZ];
 
-	if (ImGui::Button("Apply")) {
 		currentAxisX = 0;
 		currentAxisY = 0;
 		currentAxisZ = 0;

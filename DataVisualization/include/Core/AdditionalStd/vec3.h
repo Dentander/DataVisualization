@@ -11,7 +11,7 @@
 template <typename T>
 struct vec3 {
 public:
-    T x, y, z;
+    T x=0, y=0, z=0;
 
     explicit vec3(float _value)        : x(_value), y(_value), z(_value) {}
     vec3(float _x, vec2<T> const& v)   : x(_x)    , y(v.x)   , z(v.y)    {}

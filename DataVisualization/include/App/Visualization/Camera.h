@@ -19,5 +19,6 @@ private:
 public:
 	vec3f GetPosition();
 	vec2f GetRotation();
+	vec3f GetViewDirection();
 };
 

@@ -16,8 +16,8 @@ private:
 	Camera* _camera;
 	Screen* _screen;
 
-	GLuint prog_hdlr;
-	GLint location_attribute_0, location_viewport;
+	GLuint _hProgram;
+	GLint location_attribute_0;
 
 	void OnStart();
 	void OnDraw();
@@ -26,10 +26,12 @@ private:
 	bool ReadAndCompileShader(const std::string fileName, GLuint& hdlr, GLenum shaderType);
 	void SetShaders();
 	void UpdateResolution();
-	void SetData();
+	void PassCameraToShader();
+	void PassDataToShader();
 
-	void SetUniform(const std::string name, int value);
-	void SetUniform(const std::string name, float value);
-	void SetUniform(const std::string name, vec2f value);
-	void SetUniform(const std::string name, vec3f value);
+	void SetUniform(const char* name, int value);
+	void SetUniform(const char* name, float value);
+	void SetUniform(const char* name, vec2f value);
+	void SetUniform(const char* name, vec3f value);
+	void SetUniform(const char* name, GLfloat value[4]);
 };

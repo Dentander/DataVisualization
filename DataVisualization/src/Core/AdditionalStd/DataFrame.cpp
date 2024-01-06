@@ -26,6 +26,8 @@ bool DataFrame::ReadCsv(const std::string& fileName) {
         }
     }
     file.close();
+
+    _size = _data.begin()->second.size();
     Cache();
     return true;
 }
@@ -46,8 +48,7 @@ void DataFrame::Cache() {
 }
 
 size_t DataFrame::GetSize() {
-    if (_data.empty()) { return 0; }
-    return _data.begin()->second.size();
+    return _size;
 }
 
 float DataFrame::GetMin(std::string column) {

@@ -6,7 +6,6 @@ void DataLoader::OnStart() {
 	_data = AppObject::GetObjectOfType<Data>();
 	_input = AppObject::GetObjectOfType<Input>();
 	_cameraInput = AppObject::GetObjectOfType<CameraInput>();
-	_dataAxis = AppObject::GetObjectOfType<DataAxis>();
 	ImGuiFileDialog::Instance()->OpenDialog("DataFrameLoader", "Choose File", ".csv", ".");
 }
 
@@ -27,7 +26,6 @@ void DataLoader::OnDraw() {
 			std::string path = ImGuiFileDialog::Instance()->GetFilePathName();
 			_data->isReady = false;
 			_data->ReadCsv(path);
-			_dataAxis->enabled = true;
 		}
 		ImGuiFileDialog::Instance()->Close();
 	}

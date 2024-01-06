@@ -6,6 +6,9 @@
 #include <Visualization/Background.h>
 #include <UI/DataLoader.h>
 #include <UI/DataAxis.h>
+#include <UI/AxisScaler.h>
+#include <Visualization/Point3D.h>
+#include <UI/MinMaxAvgTable.h>
 
 
 void DataViewer::OnInstaniate() {
@@ -23,12 +26,19 @@ void DataViewer::OnInstaniate() {
 	camera->Instaniate(Tag::Camera);
 	
 	background->Instaniate(Tag::Visualization, 0, 0);
-	spheres->Instaniate(Tag::Visualization, 0, 1);
+	spheres->Instaniate(Tag::Visualization, 0, 10);
+
+	Point3D* p = new Point3D();
+	p->Instaniate(Tag::UI, 10000, 10000);
 
 	// ========== UI ==========
-	DataLoader* _dataFrameLoader = new DataLoader();
-	DataAxis* _dataAxes = new DataAxis();
+	DataLoader* dataFrameLoader = new DataLoader();
+	DataAxis* dataAxes = new DataAxis();
+	AxisScaler* axisScaler = new AxisScaler();
+	MinMaxAvgTable* minMaxAvgTable = new MinMaxAvgTable();
 
-	_dataFrameLoader->Instaniate(Tag::UI, 0, std::numeric_limits<float>::max());
-	_dataAxes->Instaniate(Tag::UI, 0, std::numeric_limits<float>::max());
+	dataFrameLoader->Instaniate(Tag::UI, 0, 1000);
+	dataAxes->Instaniate(Tag::UI, 0, 1000);
+	axisScaler->Instaniate(Tag::UI, 0, 1000);
+	minMaxAvgTable->Instaniate(Tag::UI, 0, 1000);
 }

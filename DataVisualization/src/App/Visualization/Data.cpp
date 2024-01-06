@@ -1,7 +1,9 @@
 #include <Visualization/Data.h>
 
 
-void Data::OnStart() {}
+void Data::OnStart() {
+
+}
 
 std::vector<DataFrameCell>& Data::GetColumnX() {
 	return (*this)[columnX];

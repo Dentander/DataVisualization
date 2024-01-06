@@ -17,6 +17,7 @@ void CameraInput::OnStart() {
 
 void CameraInput::OnUpdate() {
 	if (_input->IsKeyJustPressed("V")) { _viewerMode = !_viewerMode; }
+	if (_render->hasFocus() == false) { _viewerMode = false; }
 
 	if (_viewerMode) {
 		_render->setMouseCursorVisible(false);
@@ -24,6 +25,7 @@ void CameraInput::OnUpdate() {
 		UpdateKeys();
 	}
 	else { _render->setMouseCursorVisible(true); }
+
 	_previousViewerMode = _viewerMode;
 }
 
@@ -41,7 +43,7 @@ void CameraInput::UpdateMouse() {
 }
 
 void CameraInput::UpdateKeys() {
-	_moveDirection = vec2f(0);
+	_moveDirection = vec2f(0.0f);
 	if (_input->AreKeysPressed(_forward))  { _moveDirection += vec2f( 1,  0); }
 	if (_input->AreKeysPressed(_backward)) { _moveDirection += vec2f(-1,  0); }
 	if (_input->AreKeysPressed(_right))    { _moveDirection += vec2f( 0,  1); }
